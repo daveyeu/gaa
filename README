@@ -1,0 +1,38 @@
+Presenting Gnome Autotest Applet (gaa).
+
+This places a small status icon in your Gnome toolbar that let's you know how
+your autotest is doing.  Green -- good.  Red -- not so good.  Inspired by
+autotest/emacs.
+
+What's autotest?  Go here: http://rubyforge.org/projects/zentest/
+
+== Installation ==
+
+1. Install Ruby-GNOME2 and Ruby D-Bus:
+    * http://ruby-gnome2.sourceforge.jp/
+    * https://trac.luon.net/ruby-dbus/
+
+   Ruby-GNOME2 is available as an Ubuntu package, but as of Feisty it's an
+   older version that won't work.
+
+2. Load up "lib/autotest/gaa.rb" in your ~/.autotest file.
+
+   I used an absolute path, so something like:
+       require '/home/dave/lib/autotest/gaa'
+
+3. Startup the status icon -- "bin/gaa".
+
+   You _could_ run it by hand before running autotest.  But that's not the
+   recommended way.
+
+   Instead, add it to your session so that it's automatically run upon
+   login.  Snazzy.  On Ubuntu Feisty, System > Preferences > Sessions gets
+   you halfway there.
+
+
+== Credits ==
+
+Brought to you by David Yeu -- dave@foodforsamurai.com
+
+Many thanks to Ryan Davis and Eric Hodel of ZenTest, and the people behind
+Ruby-GNOME2 and Ruby D-Bus.
